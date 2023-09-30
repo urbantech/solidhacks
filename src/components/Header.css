@@ -1,0 +1,99 @@
+/* Background color for the header */
+.header {
+  background-color: #3498db; /* Replace with the color of your choice */
+  /* Other styles for the header */
+}
+
+/* Add styles for the hamburger menu */
+.menu-button {
+  display: none; /* Initially hide the button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.menu-button .burger::before,
+.menu-button .burger::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.menu-button .burger::before {
+  transform: translateY(-6px);
+}
+
+.menu-button .burger::after {
+  transform: translateY(6px);
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display the list horizontally */
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* Show the button for smaller screens */
+  }
+
+  .nav {
+    display: none; /* Hide the nav menu by default */
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Adjust as needed to position the menu below the header */
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .nav.open {
+    display: block; /* Show the menu when the button is clicked */
+  }
+
+  .burger.open::before {
+    transform: rotate(-45deg) translate(-4px, -5px);
+  }
+
+  .burger.open::after {
+    transform: rotate(45deg) translate(-4px, 5px);
+  }
+
+  /* Styles for the burger icon */
+  .burger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  /* Styles for the open (active) burger icon */
+  .burger.open {
+    transform: rotate(-45deg);
+  }
+}

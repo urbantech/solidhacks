@@ -1,0 +1,38 @@
+/* Feed.css */
+.feed {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .feed-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .post {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .post-author {
+    font-weight: bold;
+  }
+  
+  .post-timestamp {
+    color: #777777;
+  }
+  
+  .post-content {
+    font-size: 16px;
+  }
+  
